@@ -3,8 +3,26 @@
   opacity: 0.5;
 } */
 
+body {
+  /* background-image: url("https://media.giphy.com/media/ozf26DV8FqaCpkYt6n/giphy.gif"); */
+  background: url("./nature.jpg") fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list__box {
+  margin-bottom: 40px;
+}
+
 .todo-item {
   display: flex;
+  justify-content: space-around;
   width: 500px;
   min-height: 50px;
   border: 1px solid black;
@@ -12,6 +30,8 @@
   margin-bottom: 15px;
   padding: 10px;
   align-items: center;
+
+  background-color: rgb(195, 240, 240);
 }
 
 .todo-item.delition {
@@ -30,4 +50,33 @@
   to {
     opacity: 0;
   }
+}
+.description {
+  width: 100px;
+}
+
+.btn-delete {
+  margin-left: 40px;
+  padding: 20px;
+  background-color: pink;
+  border-radius: 5px;
+}
+
+.addBtn {
+  padding: 20px;
+  background-color: pink;
+  border-radius: 5px;
+}
+
+.list-title {
+  margin-top: 80px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.list-text {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
 }
