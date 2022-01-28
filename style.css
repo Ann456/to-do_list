@@ -1,0 +1,33 @@
+/* .checked {
+  background-color: grey;
+  opacity: 0.5;
+} */
+
+.todo-item {
+  display: flex;
+  width: 500px;
+  min-height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  align-items: center;
+}
+
+.todo-item.delition {
+  animation: opacity 1s ease-in-out;
+}
+.todo-item.checked {
+  background-color: grey;
+  opacity: 0.5;
+  color: hotpink;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
