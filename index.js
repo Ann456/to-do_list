@@ -128,3 +128,33 @@ function deleteTask(index) {
     }, 500)
     // console.log(index);
 }
+
+
+// Notification
+
+const refs = {
+    notification: document.querySelector('.js-alert'),
+};
+let timerId = null;
+
+refs.notification.addEventListener('click', onNotificationClick);
+
+showNotification();
+
+function onNotificationClick() {
+    hideNotification(); 
+}
+
+function hideNotification() {
+    refs.notification.classList.remove('is-visible');
+
+    clearTimeout(timerId);
+}
+
+function showNotification() {
+    refs.notification.classList.add('is-visible');
+
+    timerId=setTimeout(() => {
+        hideNotification()
+    }, 3000);
+}
